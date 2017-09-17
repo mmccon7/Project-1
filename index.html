@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>PET S.O.S.</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="assets/CSS/output.css">
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        
+      <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-default">
+            </ul>
+        </div>
+
+        <img class="img-rounded" src="https://dq25e8j0im0tm.cloudfront.net/images/splash/Search_Tab_Dog_287x335-1.png" width="200" height="auto" alt="dog">
+
+      <!-- Jumbotron Title -->
+	    <div class="jumbotron">
+	       <h1 class="text-center">Pet S.O.S.</h1>
+	       <h3 class="text-center">A Database of Lost and Found Pets</h3>
+	    </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+            <img class="img-rounded" id="dog" src="icons/dog_images/dog5.jpeg">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+          <h1 class="panel-title">Why Pet S.O.S?</h1>
+          </div>
+            <div id="whyUs" class="panel-body">
+            Pet S.O.S. was created to help reunite lost cats and dogs with their owners by utilizing both a nationwide pet finder database composed of shelter animals and a Lost & Found reportable database.  We are here to help you search for your lost pet and report the ones you find.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+          <h1 class="panel-title"><a href="FindAPet_Shelter.html">Shelter Pet Finder</a></h1>
+          </div>
+            <div id="shelterFinder" class="panel-body">
+            <p>Search area shelters to determine if your dog or cat has been listed in their database.  If you find a match, contact the shelter.</p>
+            <p>Alternatively, if you are interested in providing a dog or cat with a new home, the pet finder is an excellent resource to find pets available for adoption.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+          <h1 class="panel-title"><a href="Lost&Found.html">Lost and Found Pet Finder</a></h1>
+          </div>
+            <div id="lostFound" class="panel-body">
+             <p>Search the database that users have contributed information and images of pets lost or found.  If you find a match, contact the individual.</p>
+            </div>
+          </div>
+          <div class="panel panel-default">
+          <div class="panel-heading">
+          <h1 class="panel-title"><a href="AddAPet.html">Add a Pet</a></h1>
+          </div>
+            <div id="reportPet" class="panel-body">
+             <p>If you have lost or found a cat or dog and can’t find matches on Pet S.O.S., you can post a listing with the pet's information and upload an image of the animal.  This will allow others to contact you if they come up with a match from your listing.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+            <img class="img-rounded" id="cat" src="icons/cat_images/cat6.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+          <h1 class="panel-title">About</h1>
+          </div>
+            <div id="about" class="panel-body">
+             <p>The APPA National Pet Owners Survey conducted biennially report on the 2015-2016 survey that 79.7 million U.S. households have a pet and 42% have more than one. There are an estimated 77.8 million pet dogs and 85.8 million pet cats.</p>
+             <p>In a 2012 survey conducted by the ASPCA of more than 1,000 households, 15% surveyed has lost a dog or cat in the past five years and while 85% percent were recovered, it still leaves 15% without ever finding their missing family pet. That means that potentially 1.8 million households were never reunited with their lost pet.</p>
+             <p>Unfortunately, that doesn’t even begin to tell the story of what happens to pets during national disasters, like Hurricane Sandy or Hurricane Harvey.</p>  
+             <p>On any given day, you can drive or walk down any street and see signs posted on light poles and street signs with pictures of lost or found cats and dogs.  Posters get taped to grocery store/post office/coffee shop bulletin boards and windows all over America.</p>  
+             <p>What if there was an easier way to get the word out and broaden the search?  Not only to your street, but to your neighborhood, city, state, and nationwide.  Not only do our furry friends have legs that will travel, but well-meaning individuals might find a lost pet and take them home.  Your lost pet could end up miles away from your household.  An 8X10 Lost or Found poster on a light pole as someone drives past going 45 miles an hour might never be seen by either the searching family or the Good Samaritan rescuer.</p>
+             <p>If you found a pet and don’t see a lost listing, post your found listing.  Help reunite the dog or cat with their family.</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+           
+    </div> <!--end of Container-->
+
+	<!-- Firebase Reference -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Firebase Javascript -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <!-- Custom Javascript -->
+	<script src="javascript/app.js"></script>
+</body>
+</html>

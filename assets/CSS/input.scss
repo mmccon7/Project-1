@@ -1,0 +1,205 @@
+//*****EXAMPLE OF USING VARIABLES IN SASS TO STYLE******//
+$font-stack:  Helvetica, sans-serif;
+$primary-color: #696969;
+$font-weight-bold: 600;
+
+body{
+  font: 150% $font-stack;
+  color: $primary-color;
+}
+
+.panel-title{
+  font: 125% $font-stack;
+  font-weight: $font-weight-bold;
+  color: $primary-color;
+}
+
+.nav>li>a {  
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #696969;
+}
+
+.jumbotron {
+  background: #a1d6ff;
+  color: white;
+  margin-top: 15px;
+}
+
+//*****EXAMPLE OF USING MEDIA QUERIES IN SASS*****//
+
+$break-small: 830px;
+$break-large: 1670px;
+
+.jumbotron h1 {
+  font-size: 84px;
+  @media screen and (max-width: $break-small) {
+    font-size: 55px;
+  }
+}
+
+.navbar-default{
+  margin-left: 10px;
+  border-radius: 5px;
+  @media screen and (min-width: $break-large){
+    width: 225%;
+    margin-left: 30px;
+  }
+}
+
+.img-rounded{
+  float: right;
+  @media screen and (min-width: $break-large){
+    width: 12%;
+    margin-bottom: 50px;
+  }
+}
+
+#whyUs{
+  @media screen and (min-width: $break-large){
+    font: 150% $font-stack;
+  }
+}
+
+#shelterFinder{
+  @media screen and (min-width: $break-large){
+    font: 150% $font-stack;
+  }
+}
+
+#lostFound{
+  @media screen and (min-width: $break-large){
+    font: 150% $font-stack;
+  }
+}
+
+#reportPet{
+  @media screen and (min-width: $break-large){
+    font: 150% $font-stack;
+  }
+}
+
+#about{
+  @media screen and (min-width: $break-large){
+    font: 150% $font-stack;
+  }
+}
+
+.container-fluid {
+  background-image: url("../../icons/grey-linen.jpg");
+}
+
+.panel-default>.panel-heading {
+  background: #a1d6ff;
+  border: 1px solid #a1d6ff;
+}
+
+a{
+  color: #000000;
+}
+
+.delete{
+  width: 20px;
+  height: 20px;
+}
+
+//******EXAMPLE OF USING NESTING IN SASS*******//
+
+.callback {
+  img{
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 200px;
+  height: auto;
+  border-radius: 10%;
+  }
+
+  p{
+  margin-left: 200px;
+  font-size: 16px;
+  }
+}
+
+.callback{
+  margin-left: 5%;
+  margin-top: 15px;
+  display: inline-block;
+  align-items: middle;
+}
+
+.label-primary{
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+#dog{
+  width: 100%;
+  height: auto;
+}
+
+#cat{
+  width: 100%;
+  height: auto;
+}
+
+td img{
+  width: 125px;
+  border-radius: 15%;
+}
+//--------------------------MAP API STYLES-------------------
+      #map {
+        height: 300px;
+        width: 100%;
+
+      }
+
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #origin-input,
+      #destination-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 200px;
+      }
+
+      #origin-input:focus,
+      #destination-input:focus {
+        border-color: #4d90fe;
+      }
+
+     #mode-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        margin-left: 12px;
+        padding: 5px 11px 0px 11px;
+        float: left;
+        height: 90px;
+      }
+
+        #mode-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+
+
+
+

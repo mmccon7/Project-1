@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Shelter Pets</title>
+
+    
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ 
+  
+
+    <link rel="stylesheet" type="text/css" href="assets/CSS/output.css">
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+      
+    <!-- Collect the nav links, forms, and other content for toggling -->
+          <ul class="nav navbar-default">
+          </ul>
+      </div>
+
+      <img class="img-rounded" src="https://dq25e8j0im0tm.cloudfront.net/images/splash/Search_Tab_Dog_287x335-1.png" width="200" height="auto" alt="dog">
+      
+      <!-- Jumbotron Title -->
+      <div class="jumbotron">
+         <h1 class="text-center">Pet S.O.S.</h1>
+         <h3 class="text-center">Search Shelters</h3>
+      </div>
+    
+      <!--Find a Pet in Shelters - Petfinder API -->    
+    <div class="row"><!--beginning of Search Shelters & Find A Shelter div-->
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Search Local Shelters to Find Your Pet</h3>  
+            </div> 
+              <div class="panel-body">
+                <form id="sheltersearch">
+                  <div class="form-group">
+                      <label>Type</label><br>
+                      <select class="pet-type" id="animalArray"></select>    
+                  </div>
+                  <div class="form-group">
+                      <label>Size</label><br>
+                      <select class="pet-size" id="sizeArray"></select>
+                  </div>
+                  <div class="form-group">
+                      <label>Sex</label><br>
+                      <select class="pet-size" id="sexArray"></select>
+                  </div>
+                  <div class="form-group">
+                      <label>Age</label>
+                      <select class="form-control" id="ageArray"></select>
+                  </div>
+                  <div class="form-group field_1">
+                      <label>Zip Code</label>              
+                      <input type="text" maxlength="5" id="zipCode">
+                  </div>
+                  <button type="button" class="btn btn-secondary search"><i class="fa fa-search"></i>Search</button>
+                  <button type="button" class="btn btn-secondary clear"><i class="fa fa-trash"></i>Clear Results</button>
+                </form>
+
+              </div>
+          </div>
+        </div>
+         
+        <div class="col-md-6">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Find Shelter Address</h3>
+          </div>
+            <div class="panel-body">
+              <div id="shelterfind_form">
+                <form>
+                  <div class="form-group">
+                    <label>Shelter ID</label><br>  
+                    <input type="text" name="shelter" id="shelterID">   
+                  </div> 
+                  <button type="button" class="btn btn-secondary shelter_search"><i class="fa fa-search"></i>Search</button>
+                </form>
+
+              </div> 
+              <br> 
+              <div id="shelterID_search"></div>
+                <input id="origin-input" class="controls" type="text"
+                 placeholder="Enter an origin location">
+
+                 <input id="destination-input" class="controls" type="text"
+                  placeholder="Enter a destination location">
+
+                <div id="mode-selector" class="controls">
+                <input type="radio" name="type" id="changemode-walking" checked="checked">
+                <label for="changemode-walking">Walking</label><br>
+
+                 <input type="radio" name="type" id="changemode-transit">
+                 <label for="changemode-transit">Transit</label><br>
+
+                <input type="radio" name="type" id="changemode-driving">
+                <label for="changemode-driving">Driving</label>
+    </div>
+
+    <div id="map"></div>
+            </div>
+          </div>
+        </div>
+        
+    </div><!--close of row-->  
+        
+       <h2>Search Results Shelter Pets</h2>
+      <div class="row">
+        <div class="col-md-12 col-center-block">
+          <div class="thumbnail">
+              <div class="results">
+              <i class="fa fa-table"></i>
+              </div>
+          </div>
+        </div>
+
+
+ <!-- Successful Add Modal -->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                        <h3> Your Pet Has Been Added! </h3>
+                         </div> 
+                          <div class="modal-body">
+                            <p>Thank you for submiting your pet to our database!</p>
+                          </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+                  <!-- Bad Zipcode Modal -->
+                  <div class="modal fade" id="badInputModal">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                        <h3> Error! </h3>
+                         </div> 
+                          <div class="modal-body">
+                            <p>Please check you have all information entered correctly!</p>
+                          </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+
+
+      </div><!--End of results Row--> 
+    </div><!--container close -->    
+
+    
+     
+    <!-- Firebase Javascript -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <!-- Custom Javascript -->
+    <script src="javascript/app.js"></script> 
+
+    <script src="javascript/map.js"></script>
+
+      <!-- Maps API Reference -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxJ8PnD2JP3q1CEElWouXTJRAWW8JMAcQ&libraries=places&callback=initMap" async defer></script>
+
+    
+  </body>
+
+</html>
